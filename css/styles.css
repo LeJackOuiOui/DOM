@@ -1,0 +1,26 @@
+.bg-convert {
+  background: linear-gradient(to top, #111111, #603829);
+}
+.navbar-brand {
+  display: flex;
+  align-items: flex-start;
+}
+.navbar-brand-text {
+  line-height: 1.2;
+  margin-left: 10px;
+}
+.basement {
+  background-color: #603829;
+  border-radius: 0px 3px;
+  border-style: solid;
+  border-width: 36.667px;
+  border-image-outset: 0;
+  border-image-repeat: repeat;
+  border-image-slice: 48;
+  border-image-source: url(../assets/CSS_Border.webp);
+  border-image-width: 1;
+  box-shadow: 0px 0px 15px rgba(17, 17, 17, 0.8) inset;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
