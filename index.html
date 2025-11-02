@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>The Binding of Isaac: Repentance Item Finder</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -14,9 +14,9 @@
       rel="stylesheet"
       href="assets/bootstrap-5.3.8/css/bootstrap.min.css"
     />
+    <link rel="shortcut icon" href="assets/Site-favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-convert">
       <div class="container">
@@ -45,58 +45,46 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav ms-auto align-bottom">
             <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page"
-                >Todos<span class="visually-hidden">(current)</span></a
+              <button
+                class="nav-link filter-btn active"
+                aria-current="page"
+                data-tipo="todos"
               >
+                Todos<span class="visually-hidden">(current)</span>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#caves">Activos</a>
+              <button class="nav-link filter-btn" data-tipo="Active">
+                Activos
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#caves">Pasivos</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdownId"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Consumibles</a
-              >
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Pildoras</a>
-                <a class="dropdown-item" href="#">Cartas</a>
-                <a class="dropdown-item" href="#">Runas</a>
-                <a class="dropdown-item" href="#">Otros</a>
-              </div>
+              <button class="nav-link filter-btn" data-tipo="Passive">
+                Pasivos
+              </button>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <div class="d-flex">
             <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Buscar"
-              aria-label="Search"
+              class="form-control"
+              type="text"
+              placeholder="Buscar items..."
+              id="searchInput"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success" onclick="buscarObjeto()">
               Buscar
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </nav>
     <div class="container-fluid basement">
-      <div class="card">
-        <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-        <div class="card-body">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">Text</p>
-        </div>
-      </div>
+      <div
+        class="row justify-content-center g-1 align-items-start mt-2"
+        id="item-container"
+      ></div>
     </div>
-
+    <script src="js/main.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
